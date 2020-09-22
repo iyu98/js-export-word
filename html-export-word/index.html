@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="word-content">
+    <h3>this is export content(HTML.</h3>
+    <p style="color: #333;">这是 p 标签</p>
+    <a href="https://www.google.com/">Google</a>
+    <div style="text-align: center">
+      这是 div,
+    </div>
+    <img src="./panda.jpg" alt="" width="500" height="270">
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <td>年龄</td>
+      </tr>
+      <tr>
+        <td>韩梅梅</td>
+        <td>女</td>
+        <td>18</td>
+      </tr>
+    </table>
+  </div>
+  <button id="export-word-btn">导出 word</button>
+  <script src="/jquery-3.3.1.min.js"></script>
+  <script src="./FileSaver.js"></script>
+  <script src="./jquery.wordexport.js"></script>
+  <script>
+    $(function() {
+      $('#export-word-btn').click(function() {
+        $('#word-content').wordExport('export-word-test');
+      })
+    });
+  </script>
+</body>
+
+</html>
